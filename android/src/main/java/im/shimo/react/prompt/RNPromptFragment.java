@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.res.Configuration;
 import android.graphics.Paint;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RectShape;
@@ -106,6 +107,7 @@ public class RNPromptFragment extends DialogFragment implements DialogInterface.
         }
 
         input.setInputType(type);
+        input.setRawInputType(Configuration.KEYBOARD_12KEY);
         fragment.setTextInput(input);
 
         if (arguments.containsKey(ARG_DEFAULT_VALUE)) {
